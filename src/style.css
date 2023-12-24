@@ -1,0 +1,383 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+
+body{
+    background-color: white;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#root{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+}
+.App{
+    width: 100vw;
+    display: grid;
+    row-gap: 2rem;
+    position: relative;
+}
+
+img, svg{
+    max-width: 100%;
+    height: auto;
+}
+
+.menuDesktop{
+    display:flex;
+ 
+    margin-right: auto;
+
+    position: relative;
+   
+}
+
+.menuDesktop > a {
+    width: 130px;
+    text-align: end;
+    position: relative;
+    cursor: pointer;
+    transition: font-weight .2s ease-in;
+}
+
+.menuDesktop > a:hover {
+    font-weight: 600;
+}
+
+.menuDesktop > a.header-careers{
+    text-align: center;
+}
+
+.menuDesktop > a.header-about{
+    text-align: start;
+}
+
+.desktopFeatures{
+    margin-top: 1rem;
+    box-shadow: gainsboro 0px 0px 1rem;
+    padding: 1em;
+    width: auto;
+    position: absolute;
+    border-radius: .5em;
+    text-align: start;
+    background-color: white;
+}
+
+    .desktopFeatures > ul {
+         
+        padding-inline-start: 2em;
+    }
+
+    .desktopFeatures > ul > li{
+        font-weight: 400;  
+        margin-top: .5rem;
+    }
+
+    .desktopFeatures > ul > li:first-child{
+        margin-top: 0px;
+    }
+    .desktopFeatures > ul > li.todo, .mobileFeatures > ul > li.todo{
+        list-style-image: url('./components/images/icon-todo.svg');
+    }
+
+    .desktopFeatures > ul > li.calendar, .mobileFeatures > ul > li.calendar{
+        list-style-image: url('./components/images/icon-calendar.svg');
+    }
+
+    .desktopFeatures > ul > li.reminders, .mobileFeatures > ul > li.reminders{
+        list-style-image: url('./components/images/icon-reminders.svg');
+    }
+
+    .desktopFeatures > ul > li.planning, .mobileFeatures > ul > li.planning
+    {
+        list-style-image: url('./components/images/icon-planning.svg');
+    }
+
+    .mobileFeatures > ul{
+        margin-top: 1rem;
+    }
+
+    .mobileFeatures > ul > li{
+        margin-top: 1rem;
+    }
+
+    .mobileFeatures > ul > li:last-child{
+        margin-bottom: 1rem;
+    }
+
+.desktopCompany{
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: gainsboro 0px 0px 1rem;
+    text-align: start;
+    padding: 1em;
+    width: auto;
+    position: absolute;
+
+    border-radius: .5em;
+    right:0;
+}
+
+    .desktopCompany > ul > li{
+        font-weight: 400;  
+        margin-top: .5rem;
+    }
+
+    .desktopCompany > ul > li:first-child{
+        margin-top: 0px;
+    }
+
+    .desktopCompany > ul.company{
+        font-weight: 500;
+        list-style-type: none;
+    }
+
+    .desktopCompany > ul.company{
+        padding-inline-start: 0px;
+    }
+
+    .mobileCompany > ul.company{
+        margin-top: 1rem;
+        list-style-type: none;
+        padding-inline-start: 1rem;
+    }
+
+    .mobileCompany > ul.company>li{
+        margin-top: 1rem;
+
+    }
+
+
+.main-content{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+    .main-content > p{
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+.learnMoreBtn{
+    cursor: pointer;
+    padding: 1rem;
+    background-color: black;
+    font: inherit;
+    color: white;
+    border-radius: .5em;
+    border: none;
+    font-weight: bold;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.mobile-menu{
+    display:block;
+    position: absolute;
+    height: 100vh;
+    width: 70vw;
+    right: 0;
+    background-color: white;
+    padding: 2rem;
+}
+
+.btnClose{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+.mobile-menu.close{
+    display:none;
+}
+
+.closeContainer{
+    text-align: end;
+}
+
+.menuOptions>ul{
+    list-style: none;
+    padding: 0px;
+}
+
+    .menuOptions>ul>li{
+        padding: .5rem 0px;
+    }
+
+.loginContainer{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    gap: 1em;
+}
+
+.loginContainer>button{
+    padding: 1rem;
+    width: 80%;
+}
+
+.loginBtn{
+    background-color: white;
+    border: none;
+}
+
+.registerBtn{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+.dropdown{
+    cursor: pointer;
+    height: 15px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: none;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.dropdown.open{
+    background-image: url('components/images/icon-arrow-down.svg');
+}
+
+.dropdown.close{
+    background-image: url('components/images/icon-arrow-up.svg');
+}
+
+.menuMobile{
+    background: none;
+    border:none;
+    padding: 0px;
+}
+
+i.menu{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-width: 280px) and (max-width: 799px) {
+
+    html, body, #root, .App {
+        width: 100vw;
+    }
+
+    .menuDesktop{
+        display:none;
+    }
+    .header{
+        padding: 1em;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .hero{
+        content: url('./components/images/image-hero-mobile.png');
+        object-fit: contain;
+        width: 100%;
+        max-width: 100%;
+        height:auto;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+
+
+    h1{
+        font-size: 5rem;
+        word-wrap: break-word;
+    }
+
+    h1>span{
+        margin-right: 60%;
+    }
+
+    p{
+        word-wrap: break-word;
+        padding-right: 150px;
+    }
+
+    .header{
+        padding: 1em;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: start;
+    }
+
+    .menuMobile{
+        display:none;
+    }
+
+    .main-content{
+        padding: 0px;
+        
+    }
+
+    .main-content>h1{
+        text-align: start;
+    }
+
+    .main-content>p{
+        text-align: start;
+    }
+    
+    .learnMoreBtn{
+        justify-self: start;
+    }
+    .hero{
+        object-fit: contain;
+        justify-self: center;
+        
+        content: url('./components/images/image-hero-desktop.png');
+    }
+
+    .App{
+        
+        display:grid;
+        column-gap: 5rem;
+        grid-template-areas: 'header header header header header header'
+                             '. content content hero hero. '
+                             '. content content hero hero. '
+                             '. footer footer hero hero. ';
+        grid-auto-columns: minmax(0, 1fr);
+    }
+
+    .header{
+        grid-area:header;
+        
+    }
+
+    .main-content{
+        grid-area: content;
+    }
+
+    .hero{
+        max-height: 700px;
+        width: 100vw;
+        grid-area: hero;
+    }
+
+    .footer{
+        padding: 0px;
+        grid-area: footer;
+        align-items: end;
+        justify-items: center;
+    }
+}
